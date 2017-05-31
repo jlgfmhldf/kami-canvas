@@ -6,24 +6,8 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
-  startProjectHeader: {
-    id: 'boilerplate.containers.HomePage.start_project.header2',
-    defaultMessage: 'KAMI Triange Canvas ',
-  },
-  startProjectMessage: {
-    id: 'boilerplate.containers.HomePage.start_project.message2',
-    defaultMessage: 'Генератор холста для рисования из игры KAMI',
-  },
-  trymeHeader: {
-    id: 'boilerplate.containers.HomePage.tryme.header',
-    defaultMessage: 'Try me!',
-  },
-  trymeMessage: {
-    id: 'boilerplate.containers.HomePage.tryme.message',
-    defaultMessage: 'Show Github repositories by',
-  },
-  trymeAtPrefix: {
-    id: 'boilerplate.containers.HomePage.tryme.atPrefix',
-    defaultMessage: '@',
+  header: {
+    id: 'app.components.HomePage.header',
+    defaultMessage: 'This is HomePage component!',
   },
 });
