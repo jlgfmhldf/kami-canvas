@@ -2,12 +2,24 @@ import React, { PureComponent } from 'react'
 import {
   number,
   string,
+  bool,
   func,
   oneOfType,
 } from 'react-proptypes'
 import emptyFunction from 'fbjs/lib/emptyFunction'
 
-import styled from 'styled-components';
+import styled, { css } from 'styled-components'
+
+const ItemElem = styled.div`
+  background: ${props => props.color};
+  width: 50px;
+  height: 75px;
+  cursor: pointer;
+  
+  ${props => props.active && css`
+  outline: 2px solid blue;
+  `}
+`
 
 export default class PalletColor extends PureComponent { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
@@ -16,6 +28,7 @@ export default class PalletColor extends PureComponent { // eslint-disable-line 
       number,
     ]),
     color: string,
+    active: bool,
     onSelect: func,
   }
 
@@ -30,18 +43,14 @@ export default class PalletColor extends PureComponent { // eslint-disable-line 
   render() {
     const {
       color,
+      active,
     } = this.props
-
-    const ItemElem = styled.div`
-      background: ${color};
-      width: 50px;
-      height: 75px;
-      cursor: pointer;
-    `
 
     return (
       <ItemElem
         onClick={this.handleSelect}
+        color={color}
+        active={active}
       />
     );
   }
