@@ -10,7 +10,7 @@ import {
 } from 'react-proptypes';
 import styled from 'styled-components';
 
-import PalletItem from './item';
+import PalletItem from '../PalletColor';
 
 const Wrapper = styled.div`
   display: flex;

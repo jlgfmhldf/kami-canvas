@@ -1,12 +1,30 @@
-import React, { PureComponent } from 'react';
-// import styled from 'styled-components';
+import React, { PureComponent } from 'react'
+//import styled from 'styled-components'
+// import {
+//   number,
+//   string,
+//   bool,
+//   node,
+//   func,
+//   object,
+//   array,
+//   oneOf,
+//   oneOfType,
+// } from 'react-proptypes'
+// import emptyFunction from 'fbjs/lib/emptyFunction'
 
 {{#if wantMessages}}
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import { FormattedMessage } from 'react-intl'
+import messages from './messages'
 {{/if}}
 
-class {{ properCase name }} extends PureComponent { // eslint-disable-line react/prefer-stateless-function
+export default class {{ properCase name }} extends PureComponent { // eslint-disable-line react/prefer-stateless-function
+  static propTypes = {
+  }
+
+  static defaultProps = {
+  }
+
   render() {
     return (
       <div>
@@ -14,12 +32,6 @@ class {{ properCase name }} extends PureComponent { // eslint-disable-line react
         <FormattedMessage {...messages.header} />
       {{/if}}
       </div>
-    );
+    )
   }
 }
-
-{{ properCase name }}.propTypes = {
-
-};
-
-export default {{ properCase name }};

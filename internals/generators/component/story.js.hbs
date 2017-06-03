@@ -1,12 +1,22 @@
-import React from 'react';
+import React from 'react'
 
-import { storiesOf } from '@storybook/react';
-// import { action } from '@storybook/addon-actions';
-// import { linkTo } from '@storybook/addon-links';
+import { storiesOf } from '@storybook/react'
+// import { action } from '@storybook/addon-actions'
+// import { linkTo } from '@storybook/addon-links'
+import { withKnobs } from '@storybook/addon-knobs'
 
-import {{ properCase name }} from '../{{ properCase name }}';
+import {{ properCase name }} from '../{{ properCase name }}'
+
+const defaultKnobs = () => ({
+
+})
 
 storiesOf('{{ properCase name }}', module)
   .add('Default', () => (
     <{{ properCase name }} />
-  ));
+  ))
+  .add('Data', () => (
+    <{{ properCase name }}
+      {...defaultProps()}
+    />
+  ))
