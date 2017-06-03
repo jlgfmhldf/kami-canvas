@@ -56,17 +56,32 @@ module.exports = {
       }
     }
 
-    const actions = [{
-      type: 'add',
-      path: '../../app/components/{{properCase name}}/index.js',
-      templateFile: componentTemplate,
-      abortOnFail: true,
-    }, {
-      type: 'add',
-      path: '../../app/components/{{properCase name}}/tests/index.test.js',
-      templateFile: './component/test.js.hbs',
-      abortOnFail: true,
-    }];
+    const actions = [
+      {
+        type: 'add',
+        path: '../../app/components/{{properCase name}}/index.js',
+        templateFile: './component/index.js.hbs',
+        abortOnFail: true,
+      },
+      {
+        type: 'add',
+        path: '../../app/components/{{properCase name}}/{{properCase name}}.js',
+        templateFile: componentTemplate,
+        abortOnFail: true,
+      },
+      {
+        type: 'add',
+        path: '../../app/components/{{properCase name}}/{{properCase name}}.test.js',
+        templateFile: './component/test.js.hbs',
+        abortOnFail: true,
+      },
+      {
+        type: 'add',
+        path: '../../app/components/{{properCase name}}/{{properCase name}}.stories.js',
+        templateFile: './component/story.js.hbs',
+        abortOnFail: true,
+      },
+    ];
 
     // If they want a i18n messages file
     if (data.wantMessages) {

@@ -12,7 +12,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
-import pallet from './pallet'
+import pallet from './pallet';
 import Pallet from '../../components/Pallet';
 
 
