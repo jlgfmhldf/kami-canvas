@@ -1,10 +1,4 @@
-/**
-*
-* {{ properCase name }}
-*
-*/
-
-import React from 'react';
+import React, { PureComponent } from 'react';
 // import styled from 'styled-components';
 
 {{#if wantMessages}}
@@ -12,7 +6,7 @@ import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 {{/if}}
 
-class {{ properCase name }} extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+class {{ properCase name }} extends PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
